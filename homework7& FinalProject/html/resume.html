@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="../js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/resume.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="../js/resume.js"></script>
+  <title>장은희 이력서</title>
+</head>
+<body>
+  <div class="container-fluid eu-bg-wrap position-relative">
+    <header class="w-100">
+      <nav class="navbar navbar-light p-4">
+        <a class="navbar-brand eu-logo-title font-weight-bold text-white" href="#">Euni Resume</a>
+      </nav>
+    </header>
+    <h2 id="main-title" class="eu-main-title text-white position-absolute"></h2>
+  </div>
+  <div class="container-fluid eu-profile-wrap">
+    <div class="row">
+      <div class="col-12 col-lg-1"></div>
+      <div class="col-12 col-lg-5 ml-auto mr-auto mt-5">
+        <div class="eu-img-box m-auto text-center">
+          <img class="eu-img" src="../img/이력서사진.jpg" alt="이력서사진">
+        </div>
+      </div>
+      <div id="scroll-target" class="col-12 col-lg-5 ml-auto mr-auto mt-5">
+        <div id="response-title" class="eu-content-box ml-auto mr-auto text-center">
+          <h1 class="font-weight-bold pt-3">프로필</h1>
+          <div id="res-contents" class="eu-content-detail mt-3 p-3">
+            <div class="eu-content-detail mt-5 p-3">
+              <div>
+                <p class="text-left eu-profile-list-title">나이</p>
+                <p><span id="age"></span>세</p>
+              </div>
+              <div>
+                <p class="text-left eu-profile-list-title">희망 연봉</p>
+                <p><span id="sal"></span>만원</p>
+              </div>
+              <div>
+                <p class="text-left eu-profile-list-title">취업까지..</p>
+                <p>D-<span id="date"></span></p>
+              </div>
+            </div>  
+            <button id="requestData" class="btn btn-lg">Resume Ajax</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-1"></div>
+    </div>
+  </div>
+  <div class="container eu-list-wrap">
+    <div class="w-100 m-auto">
+      <h3 class="text-center">PORTFOLIO</h3>
+      <div class="row p-4">
+        <div class="col-12 col-md-4 mt-5 eu-over-hidden">
+          <img class="eu-list-img" src="../img/분석1.PNG" alt="">
+          <p class="mt-3 text-center img-description">Visualization</p>
+        </div>
+        <div class="col-12 col-md-4 mt-5 eu-over-hidden">
+          <img class="eu-list-img" src="../img/분석2.png" alt="">
+          <p class="mt-3 text-center img-description">Clustering</p>
+        </div>
+        <div class="col-12 col-md-4 mt-5 eu-over-hidden">
+          <img class="eu-list-img" src="../img/wordcloud.jpg" alt="">
+          <p class="mt-3 text-center img-description">Bigdata</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="slides" class="eu-slide-wrap container carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators eu-b-5">
+      <li data-target = "#slides" data-slide-to="0" class="active eu-list-bg"></li>
+      <li data-target = "#slides" data-slide-to="1" class="eu-list-bg"></li>
+      <li data-target = "#slides" data-slide-to="2" class="eu-list-bg"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center">
+        <img class="w-100 eu-carousel-img" src="../img/datejoha3.png" alt="background-img">
+        <div class="carousel-caption">
+          <h1 class="display-2 font-weight-bold eu-slide-title">Datejoha</h1>
+          <h3 class="eu-slide-content">고민하지 말고 데이트 조하하고 더 이쁜 사랑 하자!</h3>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <img class="w-100 eu-carousel-img" src="../img/datejoha2.png" alt="background-img">
+      </div>
+      <div class="carousel-item text-center">
+        <img class="w-100 eu-carousel-img" src="../img/datejoha1.png" alt="background-img">
+      </div>
+    </div>
+  </div>
+  <div class="media-wrap">
+    <div class="media-left media-center">
+      <h2 class="media-80 media-bg media-m-auto media-mt-1">오늘의 영화 순위</h2>
+      <input class="media-80 media-mt-3 media-h-50" id="searchDate" type="date">
+      <br>
+      <button id="movieBtn" class="media-mt-3 media-30 media-h-50">정보출력</button>
+    </div>
+    <div class="media-right">
+      <div class="media-100 media-center" id="show">
+        <div id="rank" class="media-25 media-inline-b">
+          <p class="media-fs media-mt-1">순위</p>
+        </div>
+        <div id="movieNm" class="media-25 media-inline-b">
+          <p class="media-fs media-mt-1">영화이름</p>
+        </div>
+        <div id="acc" class="media-25 media-inline-b">
+          <p class="media-fs media-mt-1">누적관객수</p>
+        </div>
+        <div id="openDt" class="media-25 media-inline-b">
+          <p class="media-fs media-mt-1">개봉일</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-4 p-5">
+        <h3 class="pl-2 mb-4">Blog</h3>
+        <a href="https://everyday-deeplearning.tistory.com/"><img class="eu-footer-img" src="../img/tistory logo.png" alt="blog"></a>
+      </div>
+      <div class="col-12 col-md-4 p-5">
+        <h3 class="pl-3 mb-4">GitHub</h3>
+        <a href="https://github.com/nsa18685"><img class="eu-footer-img" src="../img/github logo.png" alt="github"></a>
+      </div>
+      <div class="col-12 col-md-4 p-5">
+        <h3 class="pl-3 mb-4">Datejoha</h3>
+        <a href="#"><img class="eu-footer-img" src="../img/datejoha logo.png" alt="Datejoha"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

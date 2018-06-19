@@ -1,18 +1,17 @@
+
 {
-		"heading": "<h1 class='pt-3'>Euni's Resume</h1>",
- 		"body": [
-							"<div id='res-contents' class='eu-content-detail mt-3 p-3'>",
-    					"<p class='subtitle font-weight-bold'>WEB: Front-End</p>",
-    					"<p>Datejoha 웹 서비스 기획 & 디자인 및 프론트단 개발에 참여함, 2018년 07월 배포 예정</p>",
-    					"<p class='subtitle mt-5 font-weight-bold'>Bigdata Analysis: ML, Visualization</p>",
-    					"<p>Bigdata Analysis 교육을 통해 머신러닝을 이용한 빅데이터 분석 및 시각화</p>",
-    					"<p class='subtitle mt-5 font-weight-bold'>etc.</p>",
-    					"<p>blog: 공부하는 내용 복습 및 기록, 현재 Daily 약 90명의 Active User</p>",
-							"<p>github: 공부하는 코드 백업 및 공유</p>",
-    					"<p>스터디: 머신러닝 알고리즘 활용 및 팀 프로젝트 진행 중</p>",
-    					"<p>대외활동: 미래에셋 대우_빅데이터 페스티벌 참여 중</p>",
-    					"<p class='subtitle mt-5 font-weight-bold'>TO-DO List</p>",
-    					"<p>딥러닝 모델 생성 및 웹을 이용한 서비스 배포</p>",
-							"</div>"
-						]
+  "title": "Euni's Resume",
+  "contents": [
+    "WEB: Front-End", 
+    "Datejoha 웹 서비스 기획 & 디자인 및 프론트단 개발에 참여함, 2018년 07월 배포 예정", 
+    "Bigdata Analysis: ML, Visualization",
+    "Bigdata Analysis 교육을 통해 머신러닝을 이용한 빅데이터 분석 및 시각화",
+    "etc.",
+    "blog: 공부하는 내용 복습 및 기록, 현재 Daily 약 90명의 Active User",
+    "github: 공부하는 코드 백업 및 공유",
+    "스터디: 머신러닝 알고리즘 활용 및 팀 프로젝트 진행 중",
+    "대외활동: 미래에셋 대우_빅데이터 페스티벌 참여 중",
+    "TO-DO List",
+    "딥러닝 모델 생성 및 웹을 이용한 서비스 배포"
+    ]
 }

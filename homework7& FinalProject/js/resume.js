@@ -60,17 +60,14 @@ $(document).ready(function() {
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4 && xhr.status == 200) {
         var obj = JSON.parse(xhr.responseText);
-        var heading = obj.heading;
-        var body = obj.body;
-        var childHeading = document.querySelector("#response-title > h1");
-        var parents = childHeading.parentElement;
-        var contents = document.querySelector("#res-contents");
-        parents.removeChild(childHeading);
-        contents.innerHTML = '';
-        parents.innerHTML = heading;
-        for(var i in body) {
-          parents.innerHTML += body[i];
+        var title = obj.title;
+        var contents = obj.contents;
+        var heading = '<h1>' + title + '</h1>'
+        var bodies = '';
+        for(var item of contents) {
+          bodies += '<p>' + item + '</p>';
         }
+        document.querySelector('#response-title').innerHTML = heading + bodies;
       }
     }
     xhr.open('GET', '../html/resumeData.json', true);
